@@ -21,7 +21,7 @@ In this demo, we created a secret with name "testValue" and value "secretRetriev
 
 [Application.java](https://github.com/harupandi/springboot-keyvault-secret/blob/master/src/main/java/com/example/keyvaultsecret/demo/Application.java)
 
-    String secret = secretClient.getSecret("testValue").getValue();
+    secretClient.getSecret("testValue").getValue();
 
 ### Azure CLI steps to create Service Principal and give it Get and List permissions on Key Vault
 The following are the necessary steps to create a KeyVault, the secret described above, then a Service Principal for authentication and finally giving it permissions to get the secrets.
