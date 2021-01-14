@@ -39,7 +39,11 @@ The following are the necessary steps to create a KeyVault, the secret described
         --location eastus
         --query properties.vaultUri \
         --sku standard 
-    
+
+After you get the KeyVault URL, go to [Application.java](https://github.com/harupandi/springboot-keyvault-secret/blob/master/src/main/java/com/example/keyvaultsecret/demo/Application.java) and replace the .vaultUrl value with your KeyVault URL (You could also store it in application.properties and load it from there).
+
+    .vaultUrl("<KEYVAULT URL HERE>")
+
 ##### Create KeyVault Secret:
 
     az keyvault secret set --name "testValue" \
