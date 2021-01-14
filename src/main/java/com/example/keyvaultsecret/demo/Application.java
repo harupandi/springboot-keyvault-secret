@@ -13,7 +13,7 @@ import com.azure.security.keyvault.secrets.SecretClientBuilder;
 public class Application {
 
 	SecretClient secretClient = new SecretClientBuilder()
-		.vaultUrl("https://brpineda-kv.vault.azure.net/")
+		.vaultUrl("<KEYVAULT URL HERE>")
 		.credential(new DefaultAzureCredentialBuilder().build())
 		.buildClient();
 
