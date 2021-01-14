@@ -50,6 +50,15 @@ The following are the necessary steps to create a KeyVault, a secret, then a Ser
 
     az ad sp create-for-rbac --name demo-sp
 
+> Write down the values of appId, password and tenantId as they'll be used later on.
+
 ##### Give the Service Princpal Secret permissions
 
     az keyvault set-policy --name demo-kv --spn http://demo-sp --secret-permissions get list
+
+### Export required environment variables
+Lastly, you need to set 3 environment variables that DefaultAzureCredentialBuilder() will need.
+
+    export AZURE_CLIENT_ID="generated-app-ID"
+    export AZURE_CLIENT_SECRET="random-password"
+    export AZURE_TENANT_ID="tenant-ID"
