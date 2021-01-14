@@ -26,8 +26,7 @@ public class Application {
 	}
 
 	private String getSecretValue(){
-		String secret = secretClient.getSecret("testValue").getValue();
-		return secret;
+		return secretClient.getSecret("testValue").getValue();
 	}
 
 	public static void main(String[] args) {
